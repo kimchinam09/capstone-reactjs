@@ -3,9 +3,12 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, NavLink } from 'react-router-dom'
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import FacebookLoginModule from 'react-facebook-login/dist/facebook-login-render-props'
 import { ACCESS_TOKEN, FB_APP_ID, getStore } from '../constants/appConstants'
 import { loginFacebookThunk, loginThunk } from '../redux/reducers/userReducer'
+
+
+const FacebookLogin = FacebookLoginModule.default || FacebookLoginModule
 
 const Login = () => {
     const dispatch = useDispatch()

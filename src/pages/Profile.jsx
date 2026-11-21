@@ -8,7 +8,7 @@ import { getProductFavoriteThunk, toggleFavoriteThunk } from '../redux/reducers/
 
 const PAGE_SIZE = 2
 
-// Đổi ngày ISO sang DD-MM-YYYY
+// Định dạng ngày DD-MM-YYYY
 const formatDate = (date) => {
     const d = new Date(date)
     if (isNaN(d)) return date
